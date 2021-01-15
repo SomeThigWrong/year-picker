@@ -1,0 +1,14 @@
+<div class="wrapper-year-picker">
+    <input #YearSelection class="year-selection" readonly  (click)="onClickInput($event)"  (focus)="onFocus()" (blur)="onBlur()" value="{{Year}}" />
+    <div class="panel-year-picker" [hidden]="!isHiddenYearPanel">
+        <div #DecreaseYear class="glyphicon glyphicon-chevron-left " (click)="decreaseYear()"></div>
+        <div class="item-a"><strong>{{fromYear}} - {{toYear}}</strong></div>
+        <div #IncreaseYear class="glyphicon glyphicon-chevron-right" (click)="increaseYear()"></div>
+        <ng-container *ngFor="let year of years; let i = index">
+            <ng-container *ngFor="let oneyear of years[i]; let j = index">
+              <div class="item-year" (click)="selectYear($event)" [ngClass]="{'inactive-year' : (oneyear < startActiveYear) || (oneyear > endActiveYear), 'active-year' : oneyear +'年'== Year }">{{oneyear}}</div>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>
+

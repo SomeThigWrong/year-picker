@@ -1,0 +1,88 @@
+input {
+  text-align: center;
+}
+[hidden] {
+  display: none !important;
+}
+.wrapper-year-picker {
+  position: relative;
+}
+.panel-year-picker {
+  position: absolute;
+  top: 35px;
+  width: 241px;
+  height: 220px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 42px;
+  border: solid 1px #b9b9b9;
+  grid-template-columns: repeat(5, 46px);
+  grid-gap: 2px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  z-index: 2;
+}
+.item-year {
+  box-sizing: border-box;
+  height: 42px;
+  text-align: center;
+  line-height: 40px;
+}
+.active-year {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+  border-radius: 4px;
+}
+.item-year:hover,
+.item-a:hover {
+  border: solid 1px #b6b6b6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.item-year:hover {
+  background-color: #e6e6e6;
+}
+.item-a {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  justify-self: center;
+  line-height: 30px;
+  padding: 2px 8px;
+  margin: 4px 4px;
+}
+.year-selection {
+  width: 115px;
+  height: 34px;
+  border-radius: 4px;
+  border: solid 1px #c2c2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.year-selection:hover {
+  border-color: #234a8f;
+  cursor: pointer;
+}
+.on-focus-input {
+  border-color: #234a8f;
+}
+.glyphicon-chevron-left:before {
+  margin-left: 18px;
+}
+.glyphicon-chevron-right:before {
+  margin-left: 15px;
+}
+.glyphicon {
+  top: 11px;
+}
+.glyphicon:hover {
+  cursor: pointer;
+}
+.inactive-year {
+  opacity: 0.65;
+}
